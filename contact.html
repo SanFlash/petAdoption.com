@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Contact Section Styling */
+        .contact {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #bcd9f0, #7aa8e4);
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #fff;
+        }
+    
+        .contact h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+    
+        /* Form Styling */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+    
+        #contact-form input, 
+        #contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            outline: none;
+            transition: 0.3s ease-in-out;
+            color: #333;
+            background-color: #fff;
+        }
+    
+        #contact-form input:focus, 
+        #contact-form textarea:focus {
+            border-color: #ff5722;
+            box-shadow: 0 0 12px rgba(255, 87, 34, 0.7);
+        }
+    
+        #contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+    
+        /* Button Styling */
+        #contact-form button {
+            padding: 14px 25px;
+            font-size: 1rem;
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+    
+        #contact-form button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    
+        #contact-form button:active {
+            transform: scale(1);
+            background-color: #d84315;
+        }
+    
+        /* Form Input Styling */
+        input::placeholder, 
+        textarea::placeholder {
+            color: #888;
+            font-style: italic;
+        }
+    
+        /* Media Query for Smaller Screens */
+        @media (max-width: 600px) {
+            .contact {
+                padding: 20px;
+            }
+    
+            #contact-form input, 
+            #contact-form textarea {
+                font-size: 1rem;
+            }
+    
+            #contact-form button {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🐾 Pet Adoption</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt.html">Adopt a Pet</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p style="text-align: center;">© 2025 Pet Adoption Center | Follow us on Social Media</p>
+    </footer>
+
+</body>
+</html>

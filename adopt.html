@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+
+    <style>
+        /* Improved Button Styles */
+        .filters button, .adopt-btn {
+            background: linear-gradient(45deg, #ff7043, #ff5722);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            font-size: 16px;
+        }
+
+        .filters button:hover, .adopt-btn:hover {
+            background: linear-gradient(45deg, #ff5722, #e64a19);
+            transform: scale(1.1);
+        }
+
+        .modal-content button {
+            background: #ff7043;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .modal-content button:hover {
+            background: #e64a19;
+        }
+
+        /* Pet List Grid */
+        .pet-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .pet {
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            background: #79bbf1;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pet img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;  /* Centers the items horizontally */
+    align-items: center;      /* Centers the items vertically */
+    text-align: center;       /* Ensures the text inside each item is centered */
+}
+
+.filter-item {
+    padding: 8px 15px;
+    background-color: #fc9049;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-item:hover {
+    background-color: #ddd;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">🐾 Pet Adoption</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt.html">Adopt a Pet</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Adoptable Pets -->
+    <section class="pets">
+        <h2 style="text-align:center;">Meet Our Pets</h2>
+
+        <!-- Filters -->
+        <div class="filters">
+            <span class="filter-item" data-filter="dog">Dogs</span>
+            <span class="filter-item" data-filter="cat">Cats</span>
+            <span class="filter-item" data-filter="rabbit">Rabbits</span>
+            <span class="filter-item" data-filter="fish">Fishes</span>
+            <span class="filter-item" data-filter="turtle">Turtles</span>
+        </div>        
+
+        <!-- Pet List -->
+        <div class="pet-list">
+            <!-- Dogs -->
+            <div class="pet" data-category="dog">
+                <img src="images/dog.jpg" alt="Buddy">
+                <h3>Buddy</h3>
+                <p>2 Month Old</p>
+                <button class="adopt-btn" data-pet="Buddy" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+            <div class="pet" data-category="dog">
+                <img src="images/dog2.jpg" alt="Rocky">
+                <h3>Rocky</h3>
+                <p>2 Years Old</p>
+                <button class="adopt-btn" data-pet="Rocky" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+
+            <!-- Cats -->
+            <div class="pet" data-category="cat">
+                <img src="images/cat.jpg" alt="Milo">
+                <h3>Milo</h3>
+                <p>1 Year Old</p>
+                <button class="adopt-btn" data-pet="Milo" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+            <div class="pet" data-category="cat">
+                <img src="images/cat2.jpg" alt="Luna">
+                <h3>Luna</h3>
+                <p>1 Years Old</p>
+                <button class="adopt-btn" data-pet="Luna" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+
+            <!-- Rabbits -->
+            <div class="pet" data-category="rabbit">
+                <img src="images/rabbit.jpg" alt="Snowball">
+                <h3>Snowball</h3>
+                <p>6 Months Old</p>
+                <button class="adopt-btn" data-pet="Snowball" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+            <div class="pet" data-category="rabbit">
+                <img src="images/rabbit2.jpg" alt="Coco">
+                <h3>Coco</h3>
+                <p>1 Year Old</p>
+                <button class="adopt-btn" data-pet="Coco" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+
+            <!-- Fish -->
+            <div class="pet" data-category="fish">
+                <img src="images/fish.jpg" alt="Goldie">
+                <h3>Goldie</h3>
+                <p>2 Month Old</p>
+                <button class="adopt-btn" data-pet="Goldie" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+            <div class="pet" data-category="fish">
+                <img src="images/fish2.jpg" alt="Bubbles">
+                <h3>Bubbles</h3>
+                <p>1 Months Old</p>
+                <button class="adopt-btn" data-pet="Bubbles" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+
+            <!-- Turtles -->
+            <div class="pet" data-category="turtle">
+                <img src="images/turtle.jpg" alt="Leo">
+                <h3>Leo</h3>
+                <p>3 Years Old</p>
+                <button class="adopt-btn" data-pet="Leo" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+            <div class="pet" data-category="turtle">
+                <img src="images/turtle2.jpg" alt="Shelly">
+                <h3>Shelly</h3>
+                <p>5 Years Old</p>
+                <button class="adopt-btn" data-pet="Shelly" onclick="window.location.href='adoptme.html'">Adopt Me</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="text-align: center;">© 2025 Pet Adoption Center | Follow us on Social Media</p>
+    </footer>
+
+</body>
+</html>
