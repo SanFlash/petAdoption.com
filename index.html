@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* Base Styles (for larger screens) */
+        .hero {
+            background-image: url('images/hero.png') no-repeat center center/cover;
+            padding: 100px 20px;
+            color: white;
+            text-align: center;
+        }
+    
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+    
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+    
+        .btn {
+            padding: 15px 25px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+    
+        .about {
+            background-color: #9080eec7;
+            padding: 50px 20px;
+            text-align: center;
+        }
+    
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+    
+        .about p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+    
+        /* Media Queries for Smartphone Responsiveness */
+        @media (max-width: 768px) {
+    
+            /* Adjust Hero Section */
+            .hero {
+                padding: 80px 10px;
+            }
+    
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+    
+            .hero p {
+                font-size: 1.2rem;
+            }
+    
+            /* Adjust Button */
+            .btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+    
+            /* Adjust About Section */
+            .about {
+                padding: 40px 10px;
+            }
+    
+            .about h2 {
+                font-size: 2rem;
+            }
+    
+            .about p {
+                font-size: 1rem;
+            }
+    
+            /* Featured Pets Section */
+            .featured-pets {
+                text-align: center;
+                padding: 20px 10px;
+            }
+    
+            .pet-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .pet-card {
+                margin-bottom: 20px;
+                width: 90%;
+                max-width: 350px;
+            }
+    
+            .pet-card img {
+                width: 100%;
+                height: auto;
+            }
+    
+            .pet-card h3 {
+                font-size: 1.5rem;
+            }
+    
+            .pet-card p {
+                font-size: 1rem;
+            }
+    
+            /* Testimonials Section */
+            .testimonials .testimonial-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            /* Adjust Footer */
+            footer p {
+                font-size: 0.9rem;
+            }
+
+            /* Menu Button for Mobile */
+            .menu-btn {
+                display: block;
+                background-color: #ff5722;
+                color: white;
+                padding: 10px;
+                font-size: 1.2rem;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            /* Hide Navigation by default */
+            .nav-links {
+                display: none;
+                list-style: none;
+                padding: 0;
+            }
+
+            /* Show Navigation when the Menu Button is clicked */
+            .nav-links.active {
+                display: block;
+                text-align: center;
+            }
+
+        }
+
+        /* For Larger Screens: Hide the Menu Button */
+        @media (min-width: 769px) {
+            .menu-btn {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="logo">🐾 Pet Adoption</div>
+        <button class="menu-btn" id="menu-btn">Menu</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt.html">Adopt a Pet</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Find Your New Best Friend 🐶🐱🐰</h1>
+        <p>Give a loving home to a pet in need.</p>
+        <a href="adopt.html" class="btn">Find Your Pet</a>
+    </section>
+
+    <!-- Featured Pets Section -->
+    <section class="featured-pets">
+        <h2>Meet Our Featured Pets</h2>
+        <div class="pet-list">
+            <div class="pet-card">
+                <img src="images/dog.jpg" alt="Dog 1">
+                <h3>Max</h3>
+                <p>Breed: Golden Retriever</p>
+                <p>Age: 2 Years</p>
+                <a href="adopt.html" class="btn">Adopt Max</a>
+            </div>
+            <div class="pet-card">
+                <img src="images/cat.jpg" alt="Cat 1">
+                <h3>Whiskers</h3>
+                <p>Breed: Domestic Shorthair</p>
+                <p>Age: 1 Year</p>
+                <a href="adopt.html" class="btn">Adopt Whiskers</a>
+            </div>
+            <div class="pet-card">
+                <img src="images/rabbit.jpg" alt="Rabbit 1">
+                <h3>Thumper</h3>
+                <p>Breed: Holland Lop</p>
+                <p>Age: 6 Months</p>
+                <a href="adopt.html" class="btn">Adopt Thumper</a>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h2>Welcome to Our Adoption Center</h2>
+        <p>We help homeless pets find loving homes. Our team is dedicated to rescuing, caring, and matching pets with the right families.</p>
+        <p>We believe every pet deserves a chance at happiness and love. Our mission is to ensure that no pet is left behind, and each one finds the perfect family to call home.</p>
+
+        <h2>Why Adopt?</h2>
+        <p>Adopting a pet is one of the most rewarding experiences you can have. Not only are you giving a pet a second chance, but you are also opening your heart to unconditional love. Here are a few reasons to adopt:</p>
+        <ul>
+            <li>Save a life and help reduce the number of stray animals</li>
+            <li>Adopt a pet that matches your lifestyle and personality</li>
+            <li>Adoption is often less expensive than buying from breeders</li>
+            <li>You'll feel good knowing you made a difference in an animal's life</li>
+        </ul>
+
+        <h2>Our Services</h2>
+        <p>In addition to pet adoption, we also offer the following services:</p>
+        <ul>
+            <li>Pet Boarding</li>
+            <li>Grooming Services</li>
+            <li>Training& Behavior Support</li>
+            <li>Pet Health& Wellness Advice</li>
+        </ul>
+    </section>
+
+    <!-- How You Can Help Section -->
+    <section class="how-you-can-help">
+        <h2>How You Can Help</h2>
+        <p>There are many ways you can help make a difference in the lives of pets in need:</p>
+        <ul>
+            <li><strong>Adopt:</strong> The best way to help is by adopting a pet. Find your new companion today!</li>
+            <li><strong>Donate:</strong> Your generous donations help provide food, medical care, and shelter for our pets.</li>
+            <li><strong>Volunteer:</strong> Join our team of dedicated volunteers who help care for and promote our pets for adoption.</li>
+            <li><strong>Spread the Word:</strong> Help raise awareness by sharing our website and social media pages with your friends and family.</li>
+        </ul>
+        <p>Your support helps us save more lives and create a brighter future for our furry friends!</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Adopters Say</h2>
+        <div class="testimonial-list">
+            <div class="testimonial">
+                <p>"Adopting Max was the best decision we ever made! He is a wonderful companion, and we are so grateful to have him in our family." - Sarah& John</p>
+            </div>
+            <div class="testimonial">
+                <p>"Whiskers has brought so much joy to our home. Thank you for helping us find the perfect pet!" - Emily& Kevin</p>
+            </div>
+            <div class="testimonial">
+                <p>"Thumper is the sweetest rabbit. We are so glad we adopted him from your center. He is already part of our family!" - Mark& Linda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="text-align: center;">© 2025 Pet Adoption Center | Follow us on Social Media</p>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
